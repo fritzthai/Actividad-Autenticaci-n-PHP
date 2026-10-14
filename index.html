@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma Web Académica</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <main class="container">
+        <header>
+            <h1>Plataforma Web Académica</h1>
+            <nav id="nav-publico" class="nav-tabs oculto">
+                <button id="tab-login" class="btn-tab">Iniciar sesión</button>
+                <button id="tab-registro" class="btn-tab">Registrar cuenta</button>
+            </nav>
+        </header>
+        <p id="mensaje" class="mensaje-box info">Consultando sesión...</p>
+        <section id="vista-login" class="card-view oculto">
+            <h2>Ingreso al sistema</h2>
+            <form id="form-login">
+                <div class="form-group">
+                    <label for="login-email">Correo electrónico:</label>
+                    <input type="email" id="login-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-pass">Contraseña:</label>
+                    <input type="password" id="login-pass" required>
+                </div>
+                <button type="submit" class="btn-primary">Ingresar</button>
+            </form>
+        </section>
+        <section id="vista-registro" class="card-view oculto">
+            <h2>Registro de usuario</h2>
+            <form id="form-registro">
+                <div class="form-group">
+                    <label for="reg-nombre">Nombre completo:</label>
+                    <input type="text" id="reg-nombre" maxlength="100" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-email">Correo electrónico:</label>
+                    <input type="email" id="reg-email" maxlength="255" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-pass">Contraseña:</label>
+                    <input type="password" id="reg-pass" required>
+                </div>
+                <button type="submit" class="btn-success">Registrarse</button>
+            </form>
+        </section>
+        <section id="vista-panel" class="card-view oculto">
+            <h2>Mi perfil</h2>
+            <div class="user-card">
+                <h3>Bienvenido/a, <span id="user-nombre" class="highlight"></span></h3>
+                <p><strong>Correo:</strong> <span id="user-email"></span></p>
+            </div>
+        </section>
+    </main>
+    <script src="js/app.js"></script>
+</body>
+</html>
